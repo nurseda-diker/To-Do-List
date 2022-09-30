@@ -25,7 +25,7 @@ contract ToDoList{
 
 
     function get(uint _index) external view returns (string memory,bool){
-        // storage - 29397 gas --- cheaper option
+        // storage - 29397 gas --- daha ucuz seçenek
         // memory - 29480 gas
         ToDo memory todo = todos[_index];
         return (todo.text,todo.completed);
